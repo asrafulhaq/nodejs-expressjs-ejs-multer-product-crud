@@ -1,0 +1,54 @@
+<div class="container my-5">
+  <div class="row justify-content-center my-5">
+    <div class="col-md-10">
+      <a href="/create" class="btn btn-sm btn-primary mb-3">Add new product</a>
+
+      <div class="card">
+        <div class="card-body">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Photo</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% products.forEach((item, index) => { %>
+              <tr>
+                <td><%= index + 1 %></td>
+                <td>
+                  <img
+                    style="width: 60px; height: 60px; object-fit: cover"
+                    src="/products/<%= item.photo %>"
+                    alt=""
+                  />
+                </td>
+                <td><%= item.name %></td>
+                <td><%= item.regularPrice %></td>
+                <td><%= item.stock %></td>
+                <td>
+                  <a class="btn btn-sm btn-info" href="/single/<%= item.slug %>"
+                    ><i class="fa fa-eye"></i
+                  ></a>
+                  <a class="btn btn-sm btn-warning" href="/edit/<%= item.id %>"
+                    ><i class="fa fa-edit"></i
+                  ></a>
+                  <a
+                    class="btn btn-sm btn-danger"
+                    href="/product-delete/<%= item.id %>"
+                    ><i class="fa fa-trash"></i
+                  ></a>
+                </td>
+              </tr>
+              <% }) %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+<div class="container my-5">
+  <div class="row justify-content-center my-5">
+    <div class="col-md-5">
+      <a href="/" class="btn btn-sm btn-primary mb-3">back</a>
+
+      <div class="card">
+        <div class="card-header">
+          <h2>Create new product</h2>
+        </div>
+        <div class="card-body">
+          <form action="/product" enctype="multipart/form-data" method="POST">
+            <div class="my-3">
+              <label for="">Product Name</label>
+              <input class="form-control" type="text" name="name" />
+            </div>
+            <div class="my-3">
+              <label for="">Regular Price</label>
+              <input class="form-control" type="text" name="regularPrice" />
+            </div>
+            <div class="my-3">
+              <label for="">Sale Price</label>
+              <input class="form-control" type="text" name="salePrice" />
+            </div>
+            <div class="my-3">
+              <label for="">Stock</label>
+              <input class="form-control" type="text" name="stock" />
+            </div>
+            <div class="my-3">
+              <label for="">Photo</label>
+              <input class="form-control" type="file" name="productPhoto" />
+            </div>
+            <div class="my-3">
+              <button type="submit" class="btn btn-primary">Create</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
