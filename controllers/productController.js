@@ -60,7 +60,7 @@ export const createProduct = (req, res) => {
 
   fs.writeFileSync("db/product.json", JSON.stringify(productData));
 
-  res.redirect("/");
+  res.render("product");
 };
 
 // get all product
@@ -73,7 +73,7 @@ export const deleteProduct = (req, res) => {
 
   fs.writeFileSync("db/product.json", JSON.stringify(updatedData));
 
-  res.redirect("/");
+  res.render("product");
 };
 
 // show product page
@@ -149,5 +149,5 @@ export const updateProduct = (req, res) => {
 
   fs.writeFileSync("db/product.json", JSON.stringify(productData));
 
-  res.redirect("/");
+  res.render("product");
 };
