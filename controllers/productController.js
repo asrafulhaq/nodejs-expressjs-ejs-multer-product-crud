@@ -60,7 +60,7 @@ export const createProduct = (req, res) => {
 
   fs.writeFileSync("db/product.json", JSON.stringify(productData));
 
-  res.render("product");
+  res.redirect("https://multer-ejs-shop.onrender.com/");
 };
 
 // get all product
@@ -73,7 +73,7 @@ export const deleteProduct = (req, res) => {
 
   fs.writeFileSync("db/product.json", JSON.stringify(updatedData));
 
-  res.render("product");
+  res.redirect("https://multer-ejs-shop.onrender.com/");
 };
 
 // show product page
@@ -149,5 +149,5 @@ export const updateProduct = (req, res) => {
 
   fs.writeFileSync("db/product.json", JSON.stringify(productData));
 
-  res.render("product");
+  res.redirect("https://multer-ejs-shop.onrender.com/");
 };
